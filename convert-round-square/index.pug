@@ -8,12 +8,51 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
+        script(src="https://kit.fontawesome.com/32dce108fb.js" crossorigin="anonymous")
+        link(rel="shortcut icon", href="https://drive.google.com/uc?export=view&id=1qSxzovhxAeCzJUnBz7CPGT__UTZu4hbA", type="image/x-icon")
         
-        
-        title Document
+        title Herramientas de Ingenieria
     body 
+        header
+            .div.navbar 
+                h2 Conversores
         main 
-            div 
-                p#resultado1
-                p#resultado2
+            div.converter.converter-unit
+                p.title Conversor de unidades
+                div.container-input
+                    form(action="") 
+                        select#units(name="units" onChange="converter()" ) 
+                            option(value="cmin") cm => in
+                            option(value="mmin") mm => in
+                            option(value="incm") in => cm
+                            option(value="inmm") in => mm
+                    p#userSelect
+            div.converter.converter-roundsquare
+                p.title Circular => Cuadrada
+                div.container-input
+                    div.container-input-inner
+                        div.container-input-data
+                            form.user(action="") 
+                                div.caja
+                                    i.fa-solid.fa-circle-notch
+                                    input#diametro(type="number" placeholder="Diametro" onInput="roundsquare()") 
+                                    span In
+                                div.caja 
+                                    i.fa-solid.fa-ruler
+                                    input#lado(type="number" placeholder="Distancia" onInput="roundsquare()")
+                                    span mm   
+                    div.schema
+                        .area
+                            p 
+                                span#resultadoArea 
+                                i mm²
+                        .largo 
+                            p 
+                                span#resultado1
+                                i mm
+                        .ancho
+                            p 
+                                span#resultado2 
+                                i mm
+                            
         script(src="./js/scripts.js") 
