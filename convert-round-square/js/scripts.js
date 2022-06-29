@@ -1,17 +1,16 @@
-var x = document.getElementById("resultado");
+// var  lad;
 
 function roundsquare(a){
-   var area = Math.PI * (Math.pow(2,(a/2)));
-   return area
-   
-   
+   a = 15;
+   lado2 = 250;
+   area = Math.PI * (Math.pow(((a *25.4)/2),2));
+   lado1 = area /lado2;
+   return lado1;
 }
-x.innerHTML = "Hlla";
 
-console.log(roundsquare(7))
+roundsquare();
 
+// console.log(lado2);
 
-
-
-
-
+document.getElementById("resultado1").innerHTML = lado1;
+document.getElementById("resultado2").innerHTML = lado2;
