@@ -5,14 +5,14 @@
 
 $font: 'Roboto', sans-serif;
 $color1: #E6EEFA;
-$color2:#5790dfb6;
+$color2:#5790df98;
 
 html{
     font-family: $font;
     line-height: 125%;
     font-weight: 400;
     background-color: $color1;
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 header{
@@ -40,23 +40,29 @@ main{
     flex-direction: column;
     border-radius: 24px;
     margin: 16px 0;
-    box-shadow: -10px 10px 24px rgba(128, 128, 128, 0.322);
+    transition: ease-in-out .3s;
+    &:hover{
+    box-shadow: -10px 10px 24px rgba(128, 128, 128, 0.322);    
+    }
+
 }
 .converter-unit{
     width: 60vw;
     min-width: 315px;
-    max-width: 1250px;
+    max-width: 800px;
 }
 .converter-roundsquare{
     width: 40vw;
     min-width: 315px;
     max-width: 450px;
 }
+
 .container-input{
     background-color: $color2;
     backdrop-filter: blur(5px);
+    margin: 8px;
     padding: 24px;
-    border-radius: 24px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -92,13 +98,12 @@ main{
 .ancho{
     grid-column: 1 / 2;
     grid-row: 2 / 5;
-    align-items: center;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-
+    justify-content: center;
+    writing-mode: vertical-lr;
     p{
-        transform: rotate(-90deg);
+        transform: rotate(180deg);
     }
 }
 .title{
@@ -117,11 +122,10 @@ main{
     align-items: center;
     border-radius: 32px 20px 20px 0px;
     height: 32px;
-    width:155px;
-    padding: 0 0 0 16px;
+    padding: 0 16px 0 16px;
     margin: 12px 0;
     font-size: .9rem;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .3s;
 
     &:hover{
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.37);
@@ -136,8 +140,13 @@ main{
     i{
         margin-right: 8px;
     }
-
-    input{
+    #userSelect{
+        width: 80px;
+    }
+    #userInput{
+        width: 40px;
+    }
+    input, select{
         border: none;
         width: 80px;
         &:focus{

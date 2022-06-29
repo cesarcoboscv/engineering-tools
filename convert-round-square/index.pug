@@ -20,13 +20,21 @@ html(lang="en")
             div.converter.converter-unit
                 p.title Conversor de unidades
                 div.container-input
-                    form(action="") 
-                        select#units(name="units" onChange="converter()" ) 
-                            option(value="cmin") cm => in
-                            option(value="mmin") mm => in
-                            option(value="incm") in => cm
-                            option(value="inmm") in => mm
-                    p#userSelect
+                    form(action="")
+                        div.caja
+                            select#userSelect(name="units" onInput="converter()") 
+                                option(value="cmin") cm => in
+                                option(value="mmin") mm => in
+                                option(value="incm") in => cm
+                                option(value="inmm") in => mm
+                    form(action="")
+                        div.caja
+                            input#userInput(type="number" onInput="converter()")
+                            span#userInputUnit
+                    span =
+                    span#resultConvert
+                    span#unit
+                    
             div.converter.converter-roundsquare
                 p.title Circular => Cuadrada
                 div.container-input

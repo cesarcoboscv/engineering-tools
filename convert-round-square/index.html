@@ -22,15 +22,21 @@
       <div class="converter converter-unit">
         <p class="title">Conversor de unidades</p>
         <div class="container-input">
-          <form action=""> 
-            <select id="units" name="units" onChange="converter()"> 
-              <option value="cmin">cm => in</option>
-              <option value="mmin">mm => in</option>
-              <option value="incm">in => cm</option>
-              <option value="inmm">in => mm</option>
-            </select>
+          <form action="">
+            <div class="caja">
+              <select id="userSelect" name="units" onInput="converter()"> 
+                <option value="cmin">cm => in</option>
+                <option value="mmin">mm => in</option>
+                <option value="incm">in => cm</option>
+                <option value="inmm">in => mm</option>
+              </select>
+            </div>
           </form>
-          <p id="userSelect"></p>
+          <form action="">
+            <div class="caja">
+              <input id="userInput" type="number" onInput="converter()"><span id="userInputUnit"></span>
+            </div>
+          </form><span>=</span><span id="resultConvert"></span><span id="unit"></span>
         </div>
       </div>
       <div class="converter converter-roundsquare">

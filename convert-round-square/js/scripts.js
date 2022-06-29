@@ -15,18 +15,43 @@ function roundsquare() {
 }
 
 // roundsquare();
-
+document.getElementById("userInputUnit").innerText =  "cm";
 function converter(){
-   let user = document.getElementById("units");
+   let user = document.getElementById("userSelect");
    let a = user.value;
+   let c;
+
+   let userInput = document.getElementById("userInput");
+   let b = userInput.value;
+   document.getElementById("userInputUnit").innerText =  "cm";
    if(a == "cmin"){
-      document.getElementById("userSelect").innerText = a;
+      c = b / 2.54;
+      c = c.toFixed(2);
+      
+      document.getElementById("resultConvert").innerText =  c;
+      document.getElementById("unit").innerText =  " in";
+      document.getElementById("userInputUnit").innerText =  "cm";
    }else if(a == "mmin"){
-      document.getElementById("userSelect").innerText = a;
+      c = b / 25.4
+      c = c.toFixed(2);
+      
+      document.getElementById("resultConvert").innerText =  c;
+      document.getElementById("unit").innerText =  " in";
+      document.getElementById("userInputUnit").innerText =  "mm";
    }else if(a == "incm"){
-      document.getElementById("userSelect").innerText = a;
+      c = b *  2.54
+      c = c.toFixed(2);
+      
+      document.getElementById("resultConvert").innerText =  c;
+      document.getElementById("unit").innerText =  " cm";
+      document.getElementById("userInputUnit").innerText =  "in";
    }else if(a == "inmm"){
-      document.getElementById("userSelect").innerText = a;
+      c = b * 25.4;
+      c = c.toFixed(2);
+      
+      document.getElementById("resultConvert").innerText =  c;
+      document.getElementById("unit").innerText =  " mm";
+      document.getElementById("userInputUnit").innerText =  "in";
    }
    
    
