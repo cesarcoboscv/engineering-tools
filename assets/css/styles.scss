@@ -6,12 +6,13 @@
 $font: 'Roboto', sans-serif;
 $color1: #E6EEFA;
 $color2:#5790df98;
+$backgroundcolor: white;
 
 html{
     font-family: $font;
     line-height: 125%;
     font-weight: 400;
-    background-color: $color1;
+    background-color: $backgroundcolor;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -144,7 +145,7 @@ main{
         width: 80px;
     }
     #userInput{
-        width: 40px;
+        width: 70px;
     }
     input, select{
         border: none;
