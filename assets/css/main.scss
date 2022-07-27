@@ -24,10 +24,8 @@ main{
     height: 100%;
 }
 .status-container{
-    // height: 32px;
     background-color: rebeccapurple;
-    width: 20%;
-    min-width: 250px;
+    width: 70vh;
     padding: 0 24px;
 }
 .phone-container{
@@ -37,32 +35,44 @@ main{
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    min-height:600px ;
-    // background-image: url("https://drive.google.com/uc?export=view&id=10JR2WyYloLyz0jB6es7sQ8y6Qzb8rN-p");
-    background-image: url("https://drive.google.com/uc?export=view&id=1w_3xiU12_BgVIy9g6_oFzfZ0pdAo53I7");
+    min-height:600px;
+    background-image: url("https://drive.google.com/uc?export=view&id=1rlz6Dp7EYnqpGPVU0tkCXKMQ6LVzgOOt");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,20px);
-    grid-template-rows: repeat(auto-fill,20px);
+
+.display-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 69%;
     width: 95vh;
     min-width: 570px;
     background-color: rgba(0, 255, 255, 0.267);
-    padding: 16px;
+    padding: 0px 16px;
     transition: ease-in-out .5s;
-    .texto{
-        grid-column: 2 / 5;
-        grid-row: 2 / 4;
-    }
-    .boton{
-        background-color: azure;
-    }
+    border: 1px solid black;
+    border-radius: 16px; 
+}
+
+
+.buttons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-rows: minmax(60px, 65px);
+    width: 100%;
+    padding: 16px;
+    gap:4px;
+    align-items: center;
+    justify-items: center;
+  .button{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 16px;
+  }
 }
 
 
@@ -75,8 +85,9 @@ main{
         width: 100vw;
         height: 100vh;
     }
-    .container{
+    .display-container{
         width: 100%;
         height: 100%;
+        min-width: 250px;
     }
 }
