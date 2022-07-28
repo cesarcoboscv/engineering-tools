@@ -6,7 +6,6 @@
 
 html {
 				font-family: "Roboto", sans-serif;
-				line-height: 125%;
 				font-weight: 600;
 				background-color: rgb(231, 235, 237);
 				overflow-x: hidden;
@@ -27,8 +26,11 @@ main {
 				height: 100%;
 }
 
+a {
+				text-decoration: none;
+}
+
 .status-container {
-				background-color: rebeccapurple;
 				width: 70vh;
 				padding: 0 24px;
 }
@@ -70,33 +72,73 @@ main {
 				height: 69%;
 				width: 95vh;
 				min-width: 570px;
-				background-color: rgba(0, 255, 255, 0.267);
 				padding: 0px 16px;
 				-webkit-transition: ease-in-out 0.5s;
 				transition: ease-in-out 0.5s;
-				border: 1px solid black;
 				border-radius: 16px;
 }
 
 .buttons-container {
 				display: -ms-grid;
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-				-ms-grid-rows: minmax(60px, 65px);
-				grid-template-rows: minmax(60px, 65px);
+				grid-template-columns: repeat(auto-fit, minmax(100px, 105px));
+				grid-template-rows: repeat(auto-fit, minmax(100px, 105px));
 				width: 100%;
 				padding: 16px;
-				gap: 4px;
+				gap: 16px;
 				-webkit-box-align: center;
 				    -ms-flex-align: center;
 				        align-items: center;
-				justify-items: center;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
 }
 .buttons-container .button {
-				width: 60px;
-				height: 60px;
-				background-color: red;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				width: 100px;
+				height: 100px;
 				border-radius: 16px;
+				border: none;
+				-webkit-transition: ease-in-out 0.2s;
+				transition: ease-in-out 0.2s;
+				-webkit-box-shadow: 5px 5px 9px #d3d3d3, -5px -5px 9px #ededed;
+				        box-shadow: 5px 5px 9px #d3d3d3, -5px -5px 9px #ededed;
+				background-color: rgb(231, 235, 237);
+}
+.buttons-container .button:hover {
+				-webkit-transform: scale(1.1);
+				        transform: scale(1.1);
+				-webkit-transition: ease-in-out 0.5s;
+				transition: ease-in-out 0.5s;
+}
+.buttons-container .button p {
+				margin-top: 12px;
+}
+.buttons-container .button span {
+				width: 48px;
+				height: 48px;
+}
+.buttons-container .button .title {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+}
+.buttons-container .button .tools {
+				background: url("https://drive.google.com/uc?export=view&id=1ZNVb7tlzu4g_fwE9vjHL7v5VXp2OAP-7");
+				background-repeat: no-repeat;
+				background-position: center;
 }
 
 @media screen and (max-width: 800px) {
