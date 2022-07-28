@@ -31,8 +31,36 @@ a {
 }
 
 .status-container {
-				width: 70vh;
+				width: 100%;
+				height: 28px;
 				padding: 0 24px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+}
+.status-container div {
+				width: 33%;
+				height: 45px;
+				font-size: 0.9rem;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+}
+.status-container .dates {
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+}
+.status-container .bateries {
+				-webkit-box-pack: end;
+				    -ms-flex-pack: end;
+				        justify-content: flex-end;
 }
 
 .phone-container {
@@ -85,7 +113,7 @@ a {
 				grid-template-rows: repeat(auto-fit, minmax(100px, 105px));
 				width: 100%;
 				padding: 16px;
-				gap: 16px;
+				gap: 24px;
 				-webkit-box-align: center;
 				    -ms-flex-align: center;
 				        align-items: center;
@@ -117,8 +145,8 @@ a {
 .buttons-container .button:hover {
 				-webkit-transform: scale(1.1);
 				        transform: scale(1.1);
-				-webkit-transition: ease-in-out 0.5s;
-				transition: ease-in-out 0.5s;
+				-webkit-transition: ease-in-out 0.3s;
+				transition: ease-in-out 0.3s;
 }
 .buttons-container .button p {
 				margin-top: 12px;
@@ -136,7 +164,7 @@ a {
 				        align-items: center;
 }
 .buttons-container .button .tools {
-				background: url("https://drive.google.com/uc?export=view&id=1ZNVb7tlzu4g_fwE9vjHL7v5VXp2OAP-7");
+				background: url("https://drive.google.com/uc?export=view&id=1Uyrdfvo8ElpxlcA-cw1bHCiL5tmSxGmu");
 				background-repeat: no-repeat;
 				background-position: center;
 }
@@ -150,6 +178,7 @@ a {
 								background-image: none;
 								width: 100vw;
 								height: 100vh;
+								padding: 24px;
 				}
 
 				.display-container {

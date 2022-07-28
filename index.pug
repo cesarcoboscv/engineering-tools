@@ -17,7 +17,11 @@ html(lang="en")
             .phone-container
                 .display-container
                     .status-container
-                        p hola
+                        div 
+                        div.dates
+                            span#jsdates
+                        div.bateries
+                            span#bateryLevel
                     .buttons-container
                         a(href="./convert-round-square" title="Convertidor de unidades") 
                             button.button
@@ -42,3 +46,5 @@ html(lang="en")
                                 .title
                                     p Convertidor
                                     p (áreas)
+    script(src="./assets/js/date.js") 
+    script(src="./assets/js/batery.js")

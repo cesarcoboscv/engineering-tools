@@ -53,7 +53,4 @@ function converter(){
       document.getElementById("unit").innerText =  " mm";
       document.getElementById("userInputUnit").innerText =  "in";
    }
-   
-   
 }
-// converter();
