@@ -12,9 +12,23 @@ navigator.getBattery().then(function(battery) {
    battery.addEventListener('chargingchange', function(){
      updateChargeInfo();
    });
+
+   
    function updateChargeInfo(){
-     console.log("La batería esta cargando? "
-                 + (battery.charging ? "Si" : "No"));
+    var element = document.getElementById("batstatus");
+    var a = Math.round(battery.level * 100);
+      a =a + "%";
+     console.log("La batería esta cargando? " + (battery.charging ? "Si" : "No"));
+        if (battery.charging == true){
+          element.classList.remove("fa-battery-full");
+          element.classList.remove("fa-battery-three-quarters");
+          element.classList.remove("fa-battery-half");
+          element.classList.remove("fa-battery-quarter");
+          element.classList.remove("fa-battery-low");
+          element.classList.add("fa-bolt");
+          document.getElementById("bateryLevel").innerText = a; 
+        }
+                 
    }
  
 
@@ -22,12 +36,43 @@ navigator.getBattery().then(function(battery) {
      updateLevelInfo();
    });
    function updateLevelInfo(){
-     var a = ("Nivel de la batería: " + battery.level * 100 + "%");
+    var a = Math.round(battery.level * 100);
+      a =a + "%";
+    var element = document.getElementById("batstatus");
+
+        if (battery.level == 1 ){
+            document.getElementById("bateryLevel").innerText = a; 
+            element.classList.add("fa-battery-full");
+        }
+        if (battery.level < .9 && battery.charging == false){
+            document.getElementById("bateryLevel").innerText = a; 
+            element.classList.remove("fa-battery-full");    
+            element.classList.add("fa-battery-three-quarters");
+            element.classList.remove("fa-battery-half");
+            element.classList.remove("fa-bolt");
+        }
+        if (battery.level < .7 && battery.charging == false){
+            document.getElementById("bateryLevel").innerText = a;
+            element.classList.remove("fa-battery-three-quarters");
+            element.classList.add("fa-battery-half");
+            element.classList.remove("fa-battery-quarter");
+            element.classList.remove("fa-bolt");
+            
+        }
     
-        if (battery.level == 1){
+        if (battery.level < .3 && battery.charging == false){
+            document.getElementById("bateryLevel").innerText = a; 
+            element.classList.remove("fa-battery-half");   
+            element.classList.add("fa-battery-quarter");
+            element.classList.remove("fa-battery-low");
+            element.classList.remove("fa-bolt");
+        }
+        if (battery.level < .1 && battery.charging == false){
             document.getElementById("bateryLevel").innerText = a;        
-        } else if (battery.level < 1){
-            document.getElementById("bateryLevel").innerText = "Hola";        
+            element.classList.remove("fa-battery-quarter");
+            element.classList.add("fa-battery-low");
+            element.classList.remove("fa-bolt");
+            alert("Batería Baja!, Conecta tu dispositivo");
         }
    }
  

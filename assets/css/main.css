@@ -62,6 +62,9 @@ a {
 				    -ms-flex-pack: end;
 				        justify-content: flex-end;
 }
+.status-container .bateries i {
+				font-size: 1.2rem;
+}
 
 .phone-container {
 				display: -webkit-box;

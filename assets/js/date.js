@@ -1,6 +1,8 @@
 //Fecha
-function jsdates(){
+var uptodate = document.getElementById("jsdates");
+setInterval(function(){
     d = new Date();
+    dayNumber = d.getDate();
     day = d.getDay();
     hour=d.getHours();
     
@@ -19,7 +21,9 @@ function jsdates(){
     weekdays[6] = "Sabado";
     var r = weekdays[d.getDay()];
 
-    return r + " " + hour +":" + mins;
- }
+    uptodate.innerHTML =r + " " + dayNumber + " - " + hour +":" + mins;
+ },1000);
 
-document.getElementById("jsdates").innerText = jsdates();
+
+
+
