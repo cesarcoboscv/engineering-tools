@@ -1,35 +1,15 @@
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="./assets/css/main.css")
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
-        script(src="https://kit.fontawesome.com/32dce108fb.js" crossorigin="anonymous")
-        link(rel="shortcut icon", href="https://drive.google.com/uc?export=view&id=1qSxzovhxAeCzJUnBz7CPGT__UTZu4hbA", type="image/x-icon")
-        script(src="https://kit.fontawesome.com/32dce108fb.js" crossorigin="anonymous")
-        
-        
+        include ./assets/pug/_head.pug
+
         title Herramientas de Ingenieria
     body
         main
             .phone-container
                 .display-container
-                    .status-container
-                        div 
-                        div.dates
-                            span#jsdates
-                        div.bateries
-                            i#batstatus.fa-solid
-                            span#bateryLevel
-                    .buttons-container
-                        a(href="./convert-round-square" title="Convertidor de unidades") 
-                            button.button
-                                span.tools
-                                .title
-                                    p Convert. de areas                                              
-        script(src="./assets/js/main.js") 
+                    include ./assets/pug/_status.pug
+                    include ./assets/pug/_home.pug                                             
+        
+        script(src="../assets/js/main.js") 
         
