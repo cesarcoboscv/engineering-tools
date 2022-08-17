@@ -14,10 +14,12 @@ if(deviceType() == "desktop" ){
     
     var dateScript = document.createElement("script");
     dateScript.src = "../assets/js/date.js";
+    dateScript.src = "./assets/js/date.js";
     document.body.appendChild(dateScript);
     
     var batScript = document.createElement("script");
     batScript.src = "../assets/js/batery.js";
+    batScript.src = "./assets/js/batery.js";
     document.body.appendChild(batScript);
 
 }else{
