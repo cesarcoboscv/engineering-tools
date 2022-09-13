@@ -175,7 +175,7 @@ a {
 								display: none;
 				}
 
-				.phone-container {
+				.phone-container, #phonecont {
 								background-image: none;
 								width: 100vw;
 								height: 100vh;

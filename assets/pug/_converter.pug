@@ -1,8 +1,47 @@
+mixin listSelection 
+    optgroup(label="Distancia")
+        option(value="milimetro")  Milímetro
+        option(value="centimetro")  Centimetro 
+        option(value="metro") Metro
+    optgroup(label="Área")
+        option(value="mm2") mm²
+        option(value="cm2") cm²
+        option(value="m2") m²
+    optgroup(label="Volumen")
+        option(value="mm3") mm³ 
+        option(value="cm3") cm³ 
+        option(value="m3")  m³
+    optgroup(label="Fuerza")
+        option(value="Kg") Kg
+        option(value="N") Newton
+    optgroup(label="Temperatura")
+        //- option(value="joules") joules
+        option(value="celsius") Celsius
+        option(value="farenheit") Farenheit
+        option(value="BTU") BTU
+    optgroup(label="Velocidad")
+        option(value="m/s") 
+                option(value="km/s")
+
 h1 Convertidor de unidades
-ul
-    li unidades de fuerza 
-    li temperatura 
-    li velocidad 
-    li volumen
-    li distancia
-    li area
+//- ul
+//-     li unidades de fuerza 
+//-     li temperatura 
+//-     li velocidad 
+//-     li volumen
+//-     li distancia
+//-     li area
+section
+section
+    form
+        label(for="selection-one")
+        select(name="unit-list")
+            +listSelection
+            
+            //- input(type="submit" value="enviar")
+
+            label(for="selection-two")
+        select(name="unit-list") 
+            +listSelection
+            
+        //- p Hola

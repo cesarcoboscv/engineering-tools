@@ -23,3 +23,12 @@ if(deviceType() == "desktop" ){
 }else{
     document.querySelector(".status-container").style.display = "none";
 }
+
+window.onresize = resize;
+function resize(){
+    if (window.innerWidth < 800){
+        document.querySelector(".phone-container").style.backgroundImage = "none";
+    }else if(window.innerWidth > 801){
+    document.querySelector(".phone-container").style.backgroundImage = "url('https://drive.google.com/uc?export=view&id=1rlz6Dp7EYnqpGPVU0tkCXKMQ6LVzgOOt')";
+    }
+}

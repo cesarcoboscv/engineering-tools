@@ -10,12 +10,11 @@
     <script src="https://kit.fontawesome.com/32dce108fb.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&amp;id=1qSxzovhxAeCzJUnBz7CPGT__UTZu4hbA" type="image/x-icon">
     <script src="https://kit.fontawesome.com/32dce108fb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/css/main.css">
     <title>Herramientas de Ingenieria</title>
   </head>
   <body> 
     <main> 
-      <div class="phone-container">
+      <div class="phone-container" id="phonecont">
         <div class="display-container">
           <div class="status-container">
             <div> </div>
@@ -23,17 +22,79 @@
             <div class="bateries"><i class="fa-solid" id="batstatus"></i><span id="bateryLevel"></span></div>
           </div>
           <h1>Convertidor de unidades</h1>
-          <ul>
-            <li>unidades de fuerza </li>
-            <li>temperatura </li>
-            <li>velocidad </li>
-            <li>volumen</li>
-            <li>distancia</li>
-            <li>area</li>
-          </ul>
+          <section></section>
+          <section>
+            <form>
+              <label for="selection-one"></label>
+              <select name="unit-list">
+                          <optgroup label="Distancia">
+                            <option value="milimetro"> Milímetro</option>
+                            <option value="centimetro"> Centimetro </option>
+                            <option value="metro">Metro</option>
+                          </optgroup>
+                          <optgroup label="Área">
+                            <option value="mm2">mm²</option>
+                            <option value="cm2">cm²</option>
+                            <option value="m2">m²</option>
+                          </optgroup>
+                          <optgroup label="Volumen">
+                            <option value="mm3">mm³ </option>
+                            <option value="cm3">cm³ </option>
+                            <option value="m3"> m³</option>
+                          </optgroup>
+                          <optgroup label="Fuerza">
+                            <option value="Kg">Kg</option>
+                            <option value="N">Newton</option>
+                          </optgroup>
+                          <optgroup label="Temperatura">
+                            <option value="celsius">Celsius</option>
+                            <option value="farenheit">Farenheit</option>
+                            <option value="BTU">BTU</option>
+                          </optgroup>
+                          <optgroup label="Velocidad">
+                            <option value="m/s"> 
+                              <option value="km/s"></option>
+                            </option>
+                          </optgroup>
+                <label for="selection-two"></label>
+              </select>
+              <select name="unit-list"> 
+                          <optgroup label="Distancia">
+                            <option value="milimetro"> Milímetro</option>
+                            <option value="centimetro"> Centimetro </option>
+                            <option value="metro">Metro</option>
+                          </optgroup>
+                          <optgroup label="Área">
+                            <option value="mm2">mm²</option>
+                            <option value="cm2">cm²</option>
+                            <option value="m2">m²</option>
+                          </optgroup>
+                          <optgroup label="Volumen">
+                            <option value="mm3">mm³ </option>
+                            <option value="cm3">cm³ </option>
+                            <option value="m3"> m³</option>
+                          </optgroup>
+                          <optgroup label="Fuerza">
+                            <option value="Kg">Kg</option>
+                            <option value="N">Newton</option>
+                          </optgroup>
+                          <optgroup label="Temperatura">
+                            <option value="celsius">Celsius</option>
+                            <option value="farenheit">Farenheit</option>
+                            <option value="BTU">BTU</option>
+                          </optgroup>
+                          <optgroup label="Velocidad">
+                            <option value="m/s"> 
+                              <option value="km/s"></option>
+                            </option>
+                          </optgroup>
+              </select>
+            </form>
+          </section>
         </div>
       </div>
     </main>
     <script src="../assets/js/main.js"> </script>
+    <link rel="stylesheet" href="../assets/css/main.css">
   </body>
 </html>
